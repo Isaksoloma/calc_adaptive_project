@@ -1,0 +1,120 @@
+:root {
+    --soft-primary: #f0a7d0;
+    --soft-secondary: #c8b6ff;
+    --soft-background: #f8f9fa;
+    --soft-text: #4a4a4a;
+    --soft-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calculator-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .calculator {
+    background: var(--soft-background);
+    border-radius: 20px;
+    padding: 1.5rem;
+    width: 320px;
+  }
+  
+  .display {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  
+  .input-field {
+    width: 100%;
+    border: none;
+    font-size: 1.5rem;
+    text-align: right;
+    color: var(--soft-text);
+    background: transparent;
+  }
+  
+  .buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+  }
+  
+  .button {
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    background: white;
+    color: var(--soft-text);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .button:hover {
+    background: var(--soft-primary);
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  .equals {
+    background: var(--soft-secondary);
+    color: white;
+  }
+  
+  .clear {
+    background: #ffccd5;
+  }
+  
+  .history {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    width: 320px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .history-item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    list-style-type: none;
+  }
+  
+  .clear-history {
+    background: var(--soft-primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .soft-shadow {
+    box-shadow: var(--soft-shadow);
+  }
+  
+  @media (max-width: 768px) {
+    .calculator-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+    
+    .button {
+      padding: 0.8rem;
+      font-size: 1rem;
+    }
+  }
